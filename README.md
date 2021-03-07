@@ -1,22 +1,22 @@
 # doorknob
 
-Physics engine
+#### Physics engine
 To implement:
-[ ] `Vector` class
+- [ ] a `Vector` class
 	- (x,y)
 	- sq_length()
 	- dot()
 	- normalize()
 	- add, subtract, component-wise multiplication
-[ ] 2x2 Matrix
+- [ ] a 2x2 `Matrix`
 	- rotations
-[ ] `World` class
-[ ] `Body` class
+- [ ] a `World` class
+- [ ] a `Body` class
 	- position
 	- geometry
 	- rotation
 	- mass
-[ ] `Geometry` class
+- [ ] a `Geometry` class
 	- `Circle`
 	- `Box`
 	- `Terrain`... bezier curves???? no
