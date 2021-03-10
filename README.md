@@ -1,14 +1,16 @@
 # doorknob
 
 #### Physics engine
-To implement:
-- [ ] a `Vector` class
+TODO:
+- [x] style guide
+- [x] setup to build
+- [x] a `Vector` class
 	- (x,y)
 	- sq_length()
 	- dot()
 	- normalize()
 	- add, subtract, component-wise multiplication
-- [ ] a 2x2 `Matrix`
+- [x] a 2x2 `Matrix`
 	- rotations
 - [ ] a `World` class
 - [ ] a `Body` class
