@@ -1,5 +1,6 @@
 #ifndef MATRIX2_H_
 #define MATRIX2_H_
+
 #include "vector2.h"
 
 namespace door
