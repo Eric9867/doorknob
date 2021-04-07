@@ -5,12 +5,13 @@
 
 namespace door
 {
-
 class Matrix2 final
 {
 public:
 	Matrix2() = default;
 	Matrix2(float a, float b, float c, float d);
+	/* counterclockwise rotation matrix */
+	Matrix2(float theta);
 
 	Matrix2 operator+(const Matrix2& other) const;
 	Matrix2& operator+=(const Matrix2& other);
@@ -25,6 +26,6 @@ private:
 
 Matrix2 operator*(float scalar, const Matrix2& matrix);
 
-} // namespace door
+}  // namespace door
 
 #endif /* MATRIX2_H_ */

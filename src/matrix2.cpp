@@ -1,9 +1,16 @@
+#include <cmath>
 #include "matrix2.h"
 #include "vector2.h"
 
 namespace door
 {
 Matrix2::Matrix2(float a, float b, float c, float d): m_data{{a, b}, {c, d}}
+{
+}
+
+Matrix2::Matrix2(float theta)
+	: m_data{{std::cosf(theta), -std::sinf(theta)}, 
+			   {std::sinf(theta), std::cosf(theta)}}
 {
 }
 
