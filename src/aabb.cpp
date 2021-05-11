@@ -1,17 +1,17 @@
 #include "aabb.h"
 
+#include "debughelper.h"
 #include <algorithm>
 
 namespace door
 {
 void AABB::FromPoints(const std::vector<Vector2>& pts)
 {
-  if(pts.empty())
-    return;
+  DOOR_ASSERT(!pts.empty());
 
   // A bit crude, but it's fine.
   m_min = m_max = pts[0];
-  for(auto& it = pts.begin() + 1; it != pts.end(); it++)
+  for(auto it = pts.begin() + 1; it != pts.end(); it++)
   {
     auto p = *it;
     m_min.x = std::min(m_min.x, p.x);
@@ -27,7 +27,7 @@ void AABB::FromCircle(const Vector2& center, float radius)
   m_max = center + Vector2(radius);
 }
 
-bool AABB::Overlaps(AABB& other)
+bool AABB::Overlaps(AABB& other) const
 {
   return m_min.x < other.m_max.x &&
     m_max.x > other.m_min.x &&

@@ -11,14 +11,14 @@ Vector2 Vector2::Normalized() const
 	return {x * inv_sqrt, y * inv_sqrt};
 }
 
-Vector2& Vector2::Rotate(float theta)
-{
-	*this = Matrix2(theta) * *this;
-}
-
 Vector2 Vector2::Rotated(float theta) const
 {
 	return Matrix2(theta) * *this;
+}
+
+Vector2& Vector2::Rotate(float theta)
+{
+	return *this = Rotated(theta);
 }
 
 Vector2& Vector2::operator+=(const Vector2& b)

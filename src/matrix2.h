@@ -11,8 +11,8 @@ public:
 	Matrix2() = default;
 	Matrix2(float a, float b, float c, float d);
 	/* counterclockwise rotation matrix */
-	Matrix2(float theta);
-
+	explicit Matrix2(float theta);
+	
 	Matrix2 operator+(const Matrix2& other) const;
 	Matrix2& operator+=(const Matrix2& other);
 	Matrix2 operator*(float scalar) const;
